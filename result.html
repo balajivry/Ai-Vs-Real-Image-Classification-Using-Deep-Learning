@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f3;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        h2 {
+            color: #4b79a1;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            color: #555;
+        }
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            color: #4b79a1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <img src="{{ url_for('static', filename='uploads/' + image_file) }}" alt="Uploaded Image">
+        <h2>{{ prediction }}</h2>
+        <a href="{{ url_for('home') }}">Try Another Image</a>
+    </div>
+</body>
+</html>
